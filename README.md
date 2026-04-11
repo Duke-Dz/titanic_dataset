@@ -1,6 +1,6 @@
 # Titanic Survival Assignment
 
-This repository contains the full solution for the Titanic dataset assignment in `AI-Assignment 2.pdf`. It covers data cleaning, feature engineering, feature selection, and submission-ready project organization.
+This repository contains the full solution for the Titanic dataset assignment. It covers data cleaning, feature engineering, feature selection.
 
 ## Project structure
 
