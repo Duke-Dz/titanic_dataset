@@ -1,0 +1,95 @@
+{
+  "row_counts": {
+    "train": 891,
+    "test": 418
+  },
+  "engineered_features": [
+    "FamilySize",
+    "IsAlone",
+    "Deck",
+    "AgeGroup",
+    "FarePerPerson",
+    "LogFare",
+    "LogAge",
+    "PclassFareInteraction",
+    "AgeClassInteraction",
+    "One-hot encoded Sex, Embarked, CleanTitle, Deck, and AgeGroup",
+    "Scaled numeric columns for model-ready features"
+  ],
+  "categories": {
+    "Sex": [
+      "female",
+      "male"
+    ],
+    "Embarked": [
+      "C",
+      "Q",
+      "S"
+    ],
+    "CleanTitle": [
+      "Dr",
+      "Master",
+      "Miss",
+      "Mr",
+      "Mrs",
+      "Officer",
+      "Rev",
+      "Royalty"
+    ],
+    "Deck": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "T",
+      "Unknown"
+    ],
+    "AgeGroup": [
+      "Child",
+      "Teen",
+      "Adult",
+      "Senior"
+    ]
+  },
+  "scaling_statistics": {
+    "Age": {
+      "mean": "28.993737",
+      "std": "13.099686"
+    },
+    "Fare": {
+      "mean": "24.046813",
+      "std": "20.470128"
+    },
+    "FamilySize": {
+      "mean": "1.904602",
+      "std": "1.612553"
+    },
+    "FarePerPerson": {
+      "mean": "15.138683",
+      "std": "14.284503"
+    },
+    "LogAge": {
+      "mean": "3.260697",
+      "std": "0.627955"
+    },
+    "LogFare": {
+      "mean": "2.893539",
+      "std": "0.835335"
+    },
+    "AgeClassInteraction": {
+      "mean": "62.353496",
+      "std": "31.268821"
+    },
+    "PclassFareInteraction": {
+      "mean": "43.280355",
+      "std": "29.708993"
+    }
+  },
+  "output_files": {
+    "train_features": "data/train_features.csv",
+    "test_features": "data/test_features.csv"
+  }
+}

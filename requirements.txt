@@ -1,0 +1,3 @@
+# Optional tools for the notebook and charts
+jupyter
+matplotlib

@@ -1,0 +1,425 @@
+{
+  "candidate_feature_count": 50,
+  "selection_rules": {
+    "correlation_threshold": 0.85,
+    "max_selected_features": 12,
+    "importance_formula": "0.55 * normalized absolute target correlation + 0.45 * normalized information gain"
+  },
+  "selected_features": [
+    "CleanTitle_mr",
+    "CleanTitle_mrs",
+    "CleanTitle_miss",
+    "AgeClassInteractionScaled",
+    "CabinWasMissing",
+    "LogFare",
+    "FarePerPersonScaled",
+    "Pclass",
+    "IsAlone",
+    "Deck_b",
+    "PclassFareInteractionScaled",
+    "Embarked_c"
+  ],
+  "dropped_as_redundant": [
+    {
+      "feature": "Sex_female",
+      "dropped_because": "CleanTitle_mr",
+      "correlation": "0.867334"
+    },
+    {
+      "feature": "Sex_male",
+      "dropped_because": "CleanTitle_mr",
+      "correlation": "0.867334"
+    },
+    {
+      "feature": "AgeClassInteraction",
+      "dropped_because": "AgeClassInteractionScaled",
+      "correlation": "1"
+    },
+    {
+      "feature": "Deck_unknown",
+      "dropped_because": "CabinWasMissing",
+      "correlation": "1"
+    },
+    {
+      "feature": "LogFareScaled",
+      "dropped_because": "LogFare",
+      "correlation": "1"
+    },
+    {
+      "feature": "Fare",
+      "dropped_because": "LogFare",
+      "correlation": "0.917644"
+    },
+    {
+      "feature": "FareScaled",
+      "dropped_because": "LogFare",
+      "correlation": "0.917644"
+    },
+    {
+      "feature": "FarePerPerson",
+      "dropped_because": "FarePerPersonScaled",
+      "correlation": "1"
+    },
+    {
+      "feature": "PclassFareInteraction",
+      "dropped_because": "PclassFareInteractionScaled",
+      "correlation": "1"
+    }
+  ],
+  "ranking": [
+    {
+      "feature": "CleanTitle_mr",
+      "score": "1",
+      "target_correlation": "-0.549199",
+      "information_gain": "0.226289",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Sex_female",
+      "score": "0.976984",
+      "target_correlation": "0.543351",
+      "information_gain": "0.21766",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Sex_male",
+      "score": "0.976984",
+      "target_correlation": "-0.543351",
+      "information_gain": "0.21766",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "CleanTitle_mrs",
+      "score": "0.509164",
+      "target_correlation": "0.341994",
+      "information_gain": "0.083813",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "CleanTitle_miss",
+      "score": "0.494883",
+      "target_correlation": "0.335636",
+      "information_gain": "0.079834",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "AgeClassInteractionScaled",
+      "score": "0.488166",
+      "target_correlation": "-0.336299",
+      "information_gain": "0.076122",
+      "threshold": "-0.075267"
+    },
+    {
+      "feature": "AgeClassInteraction",
+      "score": "0.488166",
+      "target_correlation": "-0.336299",
+      "information_gain": "0.076122",
+      "threshold": "60"
+    },
+    {
+      "feature": "CabinWasMissing",
+      "score": "0.458727",
+      "target_correlation": "-0.316912",
+      "information_gain": "0.071082",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Deck_unknown",
+      "score": "0.458727",
+      "target_correlation": "-0.316912",
+      "information_gain": "0.071082",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "LogFare",
+      "score": "0.432558",
+      "target_correlation": "0.321902",
+      "information_gain": "0.055409",
+      "threshold": "2.737881"
+    },
+    {
+      "feature": "LogFareScaled",
+      "score": "0.432558",
+      "target_correlation": "0.321902",
+      "information_gain": "0.055409",
+      "threshold": "-0.186342"
+    },
+    {
+      "feature": "Fare",
+      "score": "0.428081",
+      "target_correlation": "0.31743",
+      "information_gain": "0.055409",
+      "threshold": "14.4542"
+    },
+    {
+      "feature": "FareScaled",
+      "score": "0.428081",
+      "target_correlation": "0.31743",
+      "information_gain": "0.055409",
+      "threshold": "-0.468615"
+    },
+    {
+      "feature": "FarePerPersonScaled",
+      "score": "0.365154",
+      "target_correlation": "0.270393",
+      "information_gain": "0.047453",
+      "threshold": "-0.478748"
+    },
+    {
+      "feature": "FarePerPerson",
+      "score": "0.365154",
+      "target_correlation": "0.270393",
+      "information_gain": "0.047453",
+      "threshold": "8.3"
+    },
+    {
+      "feature": "Pclass",
+      "score": "0.338975",
+      "target_correlation": "-0.338481",
+      "information_gain": "0",
+      "threshold": "3"
+    },
+    {
+      "feature": "IsAlone",
+      "score": "0.262743",
+      "target_correlation": "-0.203367",
+      "information_gain": "0.029709",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Deck_b",
+      "score": "0.218334",
+      "target_correlation": "0.175095",
+      "information_gain": "0.021615",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "PclassFareInteractionScaled",
+      "score": "0.212953",
+      "target_correlation": "0.109991",
+      "information_gain": "0.051695",
+      "threshold": "-0.497504"
+    },
+    {
+      "feature": "PclassFareInteraction",
+      "score": "0.212953",
+      "target_correlation": "0.109991",
+      "information_gain": "0.051695",
+      "threshold": "28.5"
+    },
+    {
+      "feature": "Embarked_c",
+      "score": "0.208085",
+      "target_correlation": "0.16824",
+      "information_gain": "0.019913",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Deck_d",
+      "score": "0.18285",
+      "target_correlation": "0.150716",
+      "information_gain": "0.016049",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Embarked_s",
+      "score": "0.181539",
+      "target_correlation": "-0.149683",
+      "information_gain": "0.015909",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Deck_e",
+      "score": "0.175155",
+      "target_correlation": "0.145321",
+      "information_gain": "0.014896",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "AgeGroup_child",
+      "score": "0.137025",
+      "target_correlation": "0.117636",
+      "information_gain": "0.009664",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Deck_c",
+      "score": "0.133048",
+      "target_correlation": "0.114652",
+      "information_gain": "0.009166",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "AgeGroup_adult",
+      "score": "0.121047",
+      "target_correlation": "-0.105233",
+      "information_gain": "0.007876",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "LogAgeScaled",
+      "score": "0.120317",
+      "target_correlation": "-0.115775",
+      "information_gain": "0.002199",
+      "threshold": "0.05596"
+    },
+    {
+      "feature": "LogAge",
+      "score": "0.120317",
+      "target_correlation": "-0.115775",
+      "information_gain": "0.002199",
+      "threshold": "3.295837"
+    },
+    {
+      "feature": "Parch",
+      "score": "0.112335",
+      "target_correlation": "0.081629",
+      "information_gain": "0.015381",
+      "threshold": "0"
+    },
+    {
+      "feature": "AgeWasMissing",
+      "score": "0.104872",
+      "target_correlation": "-0.092197",
+      "information_gain": "0.006307",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "CleanTitle_master",
+      "score": "0.095413",
+      "target_correlation": "0.085221",
+      "information_gain": "0.005063",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "FamilySizeScaled",
+      "score": "0.075743",
+      "target_correlation": "0.016639",
+      "information_gain": "0.029709",
+      "threshold": "-0.560975"
+    },
+    {
+      "feature": "FamilySize",
+      "score": "0.075743",
+      "target_correlation": "0.016639",
+      "information_gain": "0.029709",
+      "threshold": "1"
+    },
+    {
+      "feature": "CleanTitle_rev",
+      "score": "0.074479",
+      "target_correlation": "-0.064988",
+      "information_gain": "0.004725",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "EmbarkedWasMissing",
+      "score": "0.06636",
+      "target_correlation": "0.060095",
+      "information_gain": "0.003107",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "AgeScaled",
+      "score": "0.065474",
+      "target_correlation": "-0.061011",
+      "information_gain": "0.002199",
+      "threshold": "-0.228535"
+    },
+    {
+      "feature": "Age",
+      "score": "0.065474",
+      "target_correlation": "-0.061011",
+      "information_gain": "0.002199",
+      "threshold": "26"
+    },
+    {
+      "feature": "AgeGroup_teen",
+      "score": "0.063248",
+      "target_correlation": "0.058354",
+      "information_gain": "0.002418",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Deck_f",
+      "score": "0.062662",
+      "target_correlation": "0.057935",
+      "information_gain": "0.002334",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "SibSp",
+      "score": "0.054434",
+      "target_correlation": "-0.035322",
+      "information_gain": "0.009585",
+      "threshold": "0"
+    },
+    {
+      "feature": "AgeGroup_senior",
+      "score": "0.043429",
+      "target_correlation": "-0.040857",
+      "information_gain": "0.001263",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "CleanTitle_royalty",
+      "score": "0.034981",
+      "target_correlation": "0.033391",
+      "information_gain": "0.000775",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Deck_t",
+      "score": "0.028055",
+      "target_correlation": "-0.026456",
+      "information_gain": "0.000785",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Deck_a",
+      "score": "0.023017",
+      "target_correlation": "0.022287",
+      "information_gain": "0.000351",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Deck_g",
+      "score": "0.016423",
+      "target_correlation": "0.01604",
+      "information_gain": "0.000181",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "CleanTitle_dr",
+      "score": "0.008292",
+      "target_correlation": "0.008185",
+      "information_gain": "0.000048",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "Embarked_q",
+      "score": "0.003675",
+      "target_correlation": "0.00365",
+      "information_gain": "0.00001",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "CleanTitle_officer",
+      "score": "0.002509",
+      "target_correlation": "0.002496",
+      "information_gain": "0.000004",
+      "threshold": "0.5"
+    },
+    {
+      "feature": "FareWasMissing",
+      "score": "0",
+      "target_correlation": "0",
+      "information_gain": "0",
+      "threshold": null
+    }
+  ],
+  "output_files": {
+    "train_selected": "data/train_selected.csv",
+    "test_selected": "data/test_selected.csv"
+  }
+}

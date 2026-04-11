@@ -1,0 +1,114 @@
+{
+  "source_files": {
+    "train": "data/train.csv",
+    "test": "data/test.csv"
+  },
+  "row_counts": {
+    "train": 891,
+    "test": 418
+  },
+  "missing_values_before": {
+    "train": {
+      "PassengerId": 0,
+      "Survived": 0,
+      "Pclass": 0,
+      "Name": 0,
+      "Sex": 0,
+      "Age": 177,
+      "SibSp": 0,
+      "Parch": 0,
+      "Ticket": 0,
+      "Fare": 0,
+      "Cabin": 687,
+      "Embarked": 2
+    },
+    "test": {
+      "PassengerId": 0,
+      "Pclass": 0,
+      "Name": 0,
+      "Sex": 0,
+      "Age": 86,
+      "SibSp": 0,
+      "Parch": 0,
+      "Ticket": 0,
+      "Fare": 1,
+      "Cabin": 327,
+      "Embarked": 0
+    }
+  },
+  "missing_values_after": {
+    "train": {
+      "PassengerId": 0,
+      "Survived": 0,
+      "Pclass": 0,
+      "Name": 0,
+      "Sex": 0,
+      "Age": 0,
+      "SibSp": 0,
+      "Parch": 0,
+      "Ticket": 0,
+      "Fare": 0,
+      "Cabin": 0,
+      "Embarked": 0,
+      "EmbarkedWasMissing": 0,
+      "CabinWasMissing": 0,
+      "AgeWasMissing": 0,
+      "FareWasMissing": 0,
+      "CleanTitle": 0
+    },
+    "test": {
+      "PassengerId": 0,
+      "Pclass": 0,
+      "Name": 0,
+      "Sex": 0,
+      "Age": 0,
+      "SibSp": 0,
+      "Parch": 0,
+      "Ticket": 0,
+      "Fare": 0,
+      "Cabin": 0,
+      "Embarked": 0,
+      "EmbarkedWasMissing": 0,
+      "CabinWasMissing": 0,
+      "AgeWasMissing": 0,
+      "FareWasMissing": 0,
+      "CleanTitle": 0
+    }
+  },
+  "duplicates_removed": {
+    "train": 0,
+    "test": 0
+  },
+  "decisions": {
+    "Age": "Median imputation using CleanTitle + Pclass groups with title and global fallbacks.",
+    "Fare": "Median imputation by Pclass with a global fallback.",
+    "Embarked": "Mode imputation using the training-set mode.",
+    "Cabin": "Retained for deck extraction, filled with 'Unknown', and paired with CabinWasMissing indicator.",
+    "Sex": "Standardized to lowercase male/female categories.",
+    "Outliers": "Age and Fare capped using training-set IQR bounds."
+  },
+  "reference_statistics": {
+    "embarked_mode": "S",
+    "fare_by_pclass": {
+      "1": 60.287499999999994,
+      "2": 14.25,
+      "3": 8.05
+    },
+    "global_age": "28",
+    "global_fare": "14.4542"
+  },
+  "outlier_bounds": {
+    "Age": {
+      "lower": "-2.625",
+      "upper": "60.375"
+    },
+    "Fare": {
+      "lower": "-26.724",
+      "upper": "65.6344"
+    }
+  },
+  "output_files": {
+    "train_cleaned": "data/train_cleaned.csv",
+    "test_cleaned": "data/test_cleaned.csv"
+  }
+}
