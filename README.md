@@ -70,24 +70,24 @@ titanic_assignment/
 ## Selected features
 
 The final selected features are:
-- `CleanTitle_mr`
-- `CleanTitle_mrs`
-- `CleanTitle_miss`
-- `AgeClassInteractionScaled`
 - `CabinWasMissing`
 - `LogFare`
-- `FarePerPersonScaled`
+- `FarePerPerson`
 - `Pclass`
+- `PclassFareInteraction`
 - `IsAlone`
-- `Deck_b`
-- `PclassFareInteractionScaled`
-- `Embarked_c`
+- `LogAge`
+- `Parch`
+- `FamilySize`
+- `AgeWasMissing`
+- `EmbarkedWasMissing`
+- `FareWasMissing`
 
 ## Key findings
 
-- Passenger title carries strong survival signal. `Mr` is strongly associated with non-survival, while `Mrs` and `Miss` are associated with higher survival.
 - Missing cabin information is itself informative, which is why `CabinWasMissing` remains in the selected set.
-- Fare-based transformations add value, but several fare features are redundant, so only the strongest versions were retained.
+- Fare-based transformations add value, but raw `Fare` was dropped because `LogFare` captured similar signal with less redundancy.
+- Family context remains useful in the final dataset through `FamilySize`, `Parch`, and `IsAlone`.
 - The processed train and test outputs contain no missing values.
 
 ## How to run
@@ -112,7 +112,7 @@ Generated files in `data/`:
 
 ## Notebook
 
-`notebooks/Titanic_Feature_Engineering.ipynb` contains a submission-ready walkthrough of the pipeline and shows the final selected feature set. It can be opened directly in Jupyter or previewed on GitHub.
+`notebooks/Titanic_Feature_Engineering.ipynb` contains a submission-ready walkthrough of the pipeline with cleaning decisions, engineered-feature previews, transformation plots, and the final selected feature set. It can be opened directly in Jupyter or previewed on GitHub.
 
 ## Requirements
 
